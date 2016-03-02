@@ -1,13 +1,5 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-<<<<<<< HEAD
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
-        <% if logged_in? %>
-=======
+
 	<div class="container">
 	  <%= link_to "sample app", root_path, id: "logo" %>
 	  <nav>
@@ -15,15 +7,14 @@
 	      <li><%= link_to "Home",   root_path %></li>
 	      <li><%= link_to "Help",   help_path %></li>
 	      <% if logged_in? %>
->>>>>>> a653cba649fbf3bdecae4bc0a2a070522b894db0
-          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "Users", users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: "delete" %>
@@ -33,13 +24,7 @@
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
-<<<<<<< HEAD
-      </ul>
-    </nav>
-  </div>
-=======
 	    </ul>
 	  </nav>
 	</div>
->>>>>>> a653cba649fbf3bdecae4bc0a2a070522b894db0
 </header>
