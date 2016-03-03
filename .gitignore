@@ -20,4 +20,7 @@
 /spring/*.pid
 
 # Ignore .project files
-.project
+/.project
+
+# Ignore uploaded test images.
+/public/uploads
